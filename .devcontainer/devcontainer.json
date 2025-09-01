@@ -1,24 +1,12 @@
 {
   "name": "AI Agents Course Dev Container",
   "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
+    "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
+    "ghcr.io/devcontainers/features/azure-cli:1": "latest"
   },
-  "hostRequirements": {
-    "cpus": 4,
-    "memory": "8gb",
-    "storage": "32gb"
-  },
-  "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "python3 -m ipykernel install --user && echo 'source /usr/share/bash-completion/completions/git' >> ~/.bashrc",
   "customizations": {
-    "codespaces": {
-      "openFiles": ["README.md"]
-    },
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
@@ -26,37 +14,15 @@
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
-        "ms-azuretools.vscode-docker",
-        "GitHub.copilot",
-        "GitHub.copilot-chat",
-        "streetsidesoftware.code-spell-checker",
-        "eamodio.gitlens"
+        "ms-azuretools.vscode-docker"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "python.linting.enabled": true,
-        "python.linting.pylintEnabled": true,
         "python.formatting.provider": "black",
-        "python.analysis.typeCheckingMode": "basic",
-        "editor.formatOnSave": true,
-        "editor.rulers": [88],
-        "editor.renderWhitespace": "all",
-        "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true,
-        "jupyter.notebookFileRoot": "${workspaceFolder}",
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.profiles.linux": {
-          "bash": {
-            "path": "/bin/bash"
-          }
-        }
+        "editor.formatOnSave": true
       }
     }
   },
-  "remoteUser": "vscode",
-  "containerUser": "vscode",
-  "remoteEnv": {
-    "PYTHONPATH": "${containerWorkspaceFolder}",
-    "PYTHONDONTWRITEBYTECODE": "1"
-  }
+  "postCreateCommand": "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt && python3 -m ipykernel install --user",
+  "remoteUser": "vscode"
 }
