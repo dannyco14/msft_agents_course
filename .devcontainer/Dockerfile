@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.10
+FROM mcr.microsoft.com/devcontainers/python:3.12
 
 # Install system dependencies
 RUN apt-get update && \
@@ -8,10 +8,10 @@ RUN apt-get update && \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python packages
+# Install base Python tooling used across notebooks
 RUN pip install --no-cache-dir \
     black \
     ipykernel
 
-# Create workspace directory
-WORKDIR /workspace
+# The VS Code/Dev Containers spec mounts the repo under /workspaces/<name>
+# The workspaceFolder is set in devcontainer.json, so no WORKDIR override here.

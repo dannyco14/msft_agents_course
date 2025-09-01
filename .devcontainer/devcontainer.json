@@ -19,10 +19,24 @@
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.formatting.provider": "black",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "jupyter.jupyterServerType": "local"
       }
     }
   },
-  "postCreateCommand": "python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt && python3 -m ipykernel install --user",
-  "remoteUser": "vscode"
+  "workspaceFolder": "/workspaces/msft_agents_course",
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "forwardPorts": [8000, 7860, 8888],
+  "portsAttributes": {
+    "8000": { "label": "App/Chainlit/Uvicorn", "onAutoForward": "openPreview" },
+    "7860": { "label": "Gradio", "onAutoForward": "openPreview" },
+    "8888": { "label": "Jupyter", "onAutoForward": "openBrowser" }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "notify"
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt && python -m ipykernel install --user"
 }
