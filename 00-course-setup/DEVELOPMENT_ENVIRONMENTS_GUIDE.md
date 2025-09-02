@@ -37,8 +37,9 @@ When developing AI agents locally, developers face several challenges:
 
 ### Local Setup Requirements
 
-Following our [course setup guide](./README.md), you need to manually install:
+Following our [course setup guide](./README.md), you have two local options:
 
+#### Option 1: Direct Installation
 1. **Python 3.12+** with virtual environment management
 2. **Package dependencies** via `pip install -r requirements.txt`
 3. **VS Code** with Python, Jupyter, and Azure extensions
@@ -46,6 +47,18 @@ Following our [course setup guide](./README.md), you need to manually install:
 5. **Node.js** for MCP (Model Context Protocol) tools
 6. **Git configuration** and repository cloning
 7. **API key management** through `.env` files
+
+#### Option 2: Local Dev Containers (Recommended)
+1. **Docker Desktop** - Required for running containers locally
+   - **Windows**: Includes WSL 2 integration
+   - **macOS**: Native Docker support
+   - **Linux**: Docker Engine + Docker Compose
+2. **WSL 2** (Windows only) - Linux subsystem for container compatibility
+3. **VS Code** with Dev Containers extension
+4. **Git** for repository access
+5. **API key management** through `.env` files or environment variables
+
+> 💡 **Why Dev Containers Locally?** Even on your local machine, dev containers provide consistency and isolation, preventing "works on my machine" issues when collaborating with others.
 
 ## Container-Based Development Architecture
 
@@ -59,8 +72,9 @@ Just as containers solved the "works in dev, breaks in production" problem, **de
 ┌─────────────────────────────────────┐
 │           Local Machine             │
 ├─────────────────────────────────────┤
-│ 💻 VS Code                         │
+│ 💻 VS Code + Dev Containers Ext    │
 │ 🐳 Docker Desktop                  │
+│ 🐧 WSL 2 (Windows only)           │
 │ └─────────────────────────────────┐ │
 │   │     Dev Container             │ │
 │   ├───────────────────────────────┤ │

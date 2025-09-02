@@ -24,6 +24,8 @@
 | **Completely free** | ✅ | ❌ ($7-29 for course) |
 | **Works offline** | ✅ | ❌ |
 | **Full customization** | ✅ | 🟡 Limited |
+| **Requires Docker Desktop** | ✅ (for dev containers) | ❌ |
+| **Requires WSL 2 (Windows)** | ✅ (for dev containers) | ❌ |
 
 ## Architecture Summary
 
@@ -64,11 +66,14 @@ A: Yes! Your code is stored in Git. You can use both approaches with the same re
 4. Start coding! 🎉
 
 ### For Local Setup:
-1. Install [Python 3.12+](https://python.org)
-2. Install [VS Code](https://code.visualstudio.com)
-3. Clone repository: `git clone [repo-url]`
-4. Install dependencies: `pip install -r requirements.txt`
-5. Set up `.env` file with API keys
+1. Install [Docker Desktop](https://docker.com/products/docker-desktop) (for dev containers)
+2. Enable WSL 2 on Windows (Docker Desktop will guide you)
+3. Install [Python 3.12+](https://python.org) (for direct installation)
+4. Install [VS Code](https://code.visualstudio.com) + Dev Containers extension
+5. Clone repository: `git clone [repo-url]`
+6. **Option A**: Open in dev container (recommended for consistency)
+7. **Option B**: Install dependencies: `pip install -r requirements.txt`
+8. Set up `.env` file with API keys
 
 ## Troubleshooting Quick Fixes
 
