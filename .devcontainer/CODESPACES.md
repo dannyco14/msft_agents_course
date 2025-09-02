@@ -2,6 +2,8 @@
 
 This repository is fully configured to run in GitHub Codespaces with zero local setup required! 🚀
 
+> 📚 **Want to understand the architecture?** Check out our comprehensive [Development Environments Architecture Guide](../00-course-setup/DEVELOPMENT_ENVIRONMENTS_GUIDE.md) to learn how Codespaces compares to local development and why we built this infrastructure.
+
 ## 🌟 What's Included
 
 This Codespaces environment provides everything you need to learn AI Agents:

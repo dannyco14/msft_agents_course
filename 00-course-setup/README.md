@@ -4,9 +4,36 @@
 
 This lesson will cover how to run the code samples of this course.
 
+> 🎯 **New to development environments?** Check out our [Development Environments Architecture Guide](./DEVELOPMENT_ENVIRONMENTS_GUIDE.md) to understand the differences between local setup and GitHub Codespaces, and choose the best approach for your learning style.
+
 ## Join Other Learners and Get Help
 
 Before you begin cloning your repo, join the [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) to get any help with setup, any questions about the course, or to connect with other learners.
+
+## Development Environment Options
+
+You have two main options for running this course:
+
+### 🚀 GitHub Codespaces (Recommended for Beginners)
+- **Zero setup required** - Ready in 30-60 seconds
+- **Consistent environment** across all devices
+- **Pre-configured with all dependencies**
+- **Cloud-powered** with automatic secret management
+- **Perfect for learning** without local system changes
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=ai-agents-for-beginners)
+
+### 💻 Local Development (Recommended for Extended Development)
+- **Full control** over your development environment
+- **Works offline** once set up
+- **No ongoing costs** after initial setup
+- **Customizable** to your preferences
+- **Better for long-term projects**
+
+**� Quick Decision?** See our [Quick Reference Guide](./QUICK_REFERENCE.md)  
+**�📚 Need details?** Check our [Development Environments Architecture Guide](./DEVELOPMENT_ENVIRONMENTS_GUIDE.md)
+
+---
 
 ## Clone or Fork this Repo
 
