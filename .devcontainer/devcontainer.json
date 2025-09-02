@@ -26,8 +26,7 @@
         "GitHub.copilot-chat"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/opt/conda/envs/ai-agents/bin/python",
-        "python.pythonPath": "/opt/conda/envs/ai-agents/bin/python",
+        "python.defaultInterpreterPath": "/opt/conda/bin/python",
         "python.condaPath": "/opt/conda/bin/conda",
         "[python]": {
           "editor.defaultFormatter": "ms-python.python",
@@ -46,9 +45,7 @@
   "remoteUser": "vscode",
   "containerEnv": {
     "PYTHONUNBUFFERED": "1",
-    "PYTHONPATH": "/workspaces/msft_agents_course",
-    "CONDA_DEFAULT_ENV": "ai-agents",
-    "PATH": "/opt/conda/envs/ai-agents/bin:${PATH}"
+    "PYTHONPATH": "/workspaces/msft_agents_course"
   },
   "forwardPorts": [8000, 7860, 8888, 8501],
   "portsAttributes": {

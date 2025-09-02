@@ -9,56 +9,24 @@ dependencies:
   - ipykernel
   - numpy
   - pandas
-  - matplotlib
-  - seaborn
   - requests
   - python-dotenv
   - pip:
-    # Azure AI packages
-    - azure-ai-inference
-    - azure-identity
-    - azure-keyvault-secrets
-    - azure-search-documents
-    - azure-storage-blob
-    
-    # AI Agent frameworks
+    # Essential AI packages
+    - openai
     - semantic-kernel
     - pyautogen
     - autogen-agentchat
-    - langchain
-    - langchain-community
-    - langchain-openai
-    - langchain-azure-dynamic-sessions
     
-    # OpenAI and AI libraries
-    - openai
-    - anthropic
-    - transformers
-    - torch
-    - tiktoken
+    # Azure packages
+    - azure-ai-inference
+    - azure-identity
     
     # Web frameworks for demos
     - chainlit
     - streamlit
     - gradio
-    - fastapi
-    - uvicorn
     
-    # Utilities
-    - pydantic
-    - httpx
-    - aiohttp
-    - rich
-    - typer
-    
-    # Development tools
-    - pytest
-    - black
-    - flake8
-    - isort
-    - mypy
-    
-    # Jupyter extensions
-    - jupyterlab
+    # Development essentials
+    - jupyter
     - ipywidgets
-    - nbconvert
