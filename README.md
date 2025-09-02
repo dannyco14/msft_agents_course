@@ -29,6 +29,27 @@
 
 This course has 11 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
 
+**🚀 Quick Start Options:**
+
+### Option 1: GitHub Codespaces (Recommended)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/ai-agents-for-beginners)
+
+**Zero setup required!** Get started immediately with a fully configured environment in the cloud.
+
+- ✅ **No local installation needed**
+- ✅ **All dependencies pre-installed** 
+- ✅ **Jupyter notebooks ready to run**
+- ✅ **GitHub Models API included** (free tier)
+- ✅ **Azure services supported**
+
+📖 **[Complete Codespaces Setup Guide](CODESPACES_GUIDE.md)**
+
+### Option 2: Local Development
+
+For local development, see our [Course Setup Guide](./00-course-setup/README.md).
+
+---
+
 There is multi-language support for this course. Go to our [available languages here](#-multi-language-support). 
 
 If this is your first time building with Generative AI models, check out our [Generative AI For Beginners](https://aka.ms/genai-beginners) course, which includes 21 lessons on building with GenAI.

@@ -1,10 +1,13 @@
 {
   "name": "AI Agents Course Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": "latest"
+    "ghcr.io/devcontainers/features/azure-cli:1": "latest",
+    "ghcr.io/devcontainers/features/common-utils:1": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
+    }
   },
   "customizations": {
     "vscode": {
@@ -14,29 +17,48 @@
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
-        "ms-azuretools.vscode-docker"
+        "ms-vscode.azure-account",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "python.formatting.provider": "black",
-        "editor.formatOnSave": true,
-        "jupyter.jupyterServerType": "local"
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.python",
+          "editor.formatOnSave": true
+        },
+        "jupyter.jupyterServerType": "local",
+        "jupyter.alwaysTrustNotebooks": true,
+        "python.terminal.activateEnvironment": true
       }
     }
   },
   "workspaceFolder": "/workspaces/msft_agents_course",
   "remoteUser": "vscode",
   "containerEnv": {
-    "PYTHONUNBUFFERED": "1"
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONPATH": "/workspaces/msft_agents_course"
   },
-  "forwardPorts": [8000, 7860, 8888],
+  "forwardPorts": [8000, 7860, 8888, 8501],
   "portsAttributes": {
-    "8000": { "label": "App/Chainlit/Uvicorn", "onAutoForward": "openPreview" },
-    "7860": { "label": "Gradio", "onAutoForward": "openPreview" },
-    "8888": { "label": "Jupyter", "onAutoForward": "openBrowser" }
+    "8000": { 
+      "label": "Chainlit/Apps", 
+      "onAutoForward": "openPreview"
+    },
+    "7860": { 
+      "label": "Gradio", 
+      "onAutoForward": "openPreview"
+    },
+    "8888": { 
+      "label": "Jupyter", 
+      "onAutoForward": "openBrowser"
+    },
+    "8501": { 
+      "label": "Streamlit", 
+      "onAutoForward": "openPreview"
+    }
   },
-  "otherPortsAttributes": {
-    "onAutoForward": "notify"
-  },
-  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements.txt && python -m ipykernel install --user"
+  "postCreateCommand": ".devcontainer/post-create.sh",
+  "postStartCommand": ".devcontainer/post-start.sh",
+  "postAttachCommand": "echo '🎉 Welcome to AI Agents Course! Check CODESPACES_GUIDE.md to get started.'"
 }
