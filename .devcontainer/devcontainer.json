@@ -66,7 +66,7 @@
       "onAutoForward": "openPreview"
     }
   },
-  "postCreateCommand": ".devcontainer/post-create.sh",
-  "postStartCommand": ".devcontainer/post-start.sh",
+  "postCreateCommand": "chmod +x .devcontainer/post-create.sh && ./.devcontainer/post-create.sh",
+  "postStartCommand": "chmod +x .devcontainer/post-start.sh && ./.devcontainer/post-start.sh",
   "postAttachCommand": "echo '🎉 Welcome to AI Agents Course! 🐍 Conda environment ready. Check CODESPACES_GUIDE.md to get started.'"
 }
