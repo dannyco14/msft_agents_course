@@ -24,6 +24,16 @@ fi
 echo "🔧 Setting up Jupyter kernel..."
 python -m ipykernel install --user --name python3 --display-name "Python 3.12 (AI Agents)"
 
+# Configure VS Code Python interpreter
+echo "🐍 Configuring Python interpreter for VS Code..."
+mkdir -p .vscode
+cat > .vscode/settings.json << 'EOF'
+{
+    "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
+    "python.pythonPath": "/usr/local/bin/python3.12"
+}
+EOF
+
 # Create .env file from template if it doesn't exist
 echo "⚙️ Setting up environment configuration..."
 if [ ! -f ".env" ] && [ -f ".env.example" ]; then
