@@ -7,7 +7,16 @@ Welcome to the AI Agents for Beginners course! This guide will help you get up a
 ### 1. Open in Codespaces
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/ai-agents-for-beginners)
 
-### 2. Set Your API Key
+### 2. Environment Setup (Automatic)
+Your conda environment is automatically created and activated! You'll see:
+```bash
+🐍 Conda Environment:
+  Environment: ai-agents
+  Python: /opt/conda/envs/ai-agents/bin/python
+  Version: Python 3.12.x
+```
+
+### 3. Set Your API Key
 Choose your preferred method:
 
 **Option A: Codespaces Secrets (Recommended)**
@@ -21,7 +30,7 @@ cp .env.example .env
 # Edit .env with your API keys
 ```
 
-### 3. Start Learning!
+### 4. Start Learning!
 ```bash
 cd 01-intro-to-ai-agents/code_samples
 # Open any .ipynb file and start coding!
@@ -80,7 +89,34 @@ If you want to use Azure OpenAI or Azure AI Foundry:
    PROJECT_ENDPOINT=your_project_endpoint
    ```
 
-## 📚 Course Navigation
+## � Conda Environment Management
+
+Your environment uses **Conda** for professional dependency management:
+
+### Environment Commands
+```bash
+# Check current environment
+conda info
+
+# Install additional packages
+conda install package_name
+# or
+pip install package_name
+
+# List installed packages
+conda list
+
+# Update packages
+conda update --all
+
+# Export environment (for sharing)
+conda env export > my_environment.yml
+```
+
+### Jupyter Kernels
+Your environment includes the **"Python 3.12 (AI Agents)"** kernel for Jupyter notebooks.
+
+## �📚 Course Navigation
 
 The course is structured in 11+ progressive lessons:
 

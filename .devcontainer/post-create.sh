@@ -1,36 +1,49 @@
 #!/bin/bash
 
 # AI Agents Course - Post-Create Script for Codespaces
-# This script runs after the container is created to set up the development environment
+# This script runs after the container is created to set up the conda environment
 
 set -e
 
-echo "🚀 Starting AI Agents Course setup..."
+echo "🚀 Starting AI Agents Course setup with Conda..."
 
-# Update pip to latest version
-echo "📦 Updating pip..."
-python -m pip install --upgrade pip
+# Initialize conda for bash
+echo "� Initializing conda..."
+/opt/conda/bin/conda init bash
+source ~/.bashrc
 
-# Install Python requirements
-echo "📋 Installing Python requirements..."
-if [ -f "requirements.txt" ]; then
-    python -m pip install -r requirements.txt
-    echo "✅ Requirements installed successfully"
+# Create conda environment from environment.yml
+echo "� Creating AI Agents conda environment..."
+if [ -f "environment.yml" ]; then
+    /opt/conda/bin/conda env create -f environment.yml
+    echo "✅ Conda environment 'ai-agents' created successfully"
 else
-    echo "❌ requirements.txt not found"
+    echo "❌ environment.yml not found, creating basic environment..."
+    /opt/conda/bin/conda create -n ai-agents python=3.12 -y
+fi
+
+# Activate the environment
+echo "🔄 Activating ai-agents environment..."
+source /opt/conda/bin/activate ai-agents
+
+# Install additional packages if requirements.txt exists (fallback)
+if [ -f "requirements.txt" ]; then
+    echo "📋 Installing additional packages from requirements.txt..."
+    pip install -r requirements.txt
 fi
 
 # Install IPython kernel for Jupyter
 echo "🔧 Setting up Jupyter kernel..."
-python -m ipykernel install --user --name python3 --display-name "Python 3.12 (AI Agents)"
+python -m ipykernel install --user --name ai-agents --display-name "Python 3.12 (AI Agents)"
 
 # Configure VS Code Python interpreter
 echo "🐍 Configuring Python interpreter for VS Code..."
 mkdir -p .vscode
 cat > .vscode/settings.json << 'EOF'
 {
-    "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
-    "python.pythonPath": "/usr/local/bin/python3.12"
+    "python.defaultInterpreterPath": "/opt/conda/envs/ai-agents/bin/python",
+    "python.pythonPath": "/opt/conda/envs/ai-agents/bin/python",
+    "python.condaPath": "/opt/conda/bin/conda"
 }
 EOF
 

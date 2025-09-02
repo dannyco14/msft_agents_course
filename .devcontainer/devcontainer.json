@@ -3,6 +3,10 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {
     "ghcr.io/devcontainers/features/azure-cli:1": "latest",
+    "ghcr.io/devcontainers/features/conda:1": {
+      "channels": "conda-forge,defaults",
+      "version": "latest"
+    },
     "ghcr.io/devcontainers/features/common-utils:1": {
       "installZsh": true,
       "installOhMyZsh": true,
@@ -22,8 +26,9 @@
         "GitHub.copilot-chat"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
-        "python.pythonPath": "/usr/local/bin/python3.12",
+        "python.defaultInterpreterPath": "/opt/conda/envs/ai-agents/bin/python",
+        "python.pythonPath": "/opt/conda/envs/ai-agents/bin/python",
+        "python.condaPath": "/opt/conda/bin/conda",
         "[python]": {
           "editor.defaultFormatter": "ms-python.python",
           "editor.formatOnSave": true
@@ -32,7 +37,8 @@
         "jupyter.alwaysTrustNotebooks": true,
         "python.terminal.activateEnvironment": true,
         "python.analysis.autoImportCompletions": true,
-        "python.analysis.typeCheckingMode": "basic"
+        "python.analysis.typeCheckingMode": "basic",
+        "python.envFile": "${workspaceFolder}/.env"
       }
     }
   },
@@ -40,7 +46,9 @@
   "remoteUser": "vscode",
   "containerEnv": {
     "PYTHONUNBUFFERED": "1",
-    "PYTHONPATH": "/workspaces/msft_agents_course"
+    "PYTHONPATH": "/workspaces/msft_agents_course",
+    "CONDA_DEFAULT_ENV": "ai-agents",
+    "PATH": "/opt/conda/envs/ai-agents/bin:${PATH}"
   },
   "forwardPorts": [8000, 7860, 8888, 8501],
   "portsAttributes": {
@@ -63,5 +71,5 @@
   },
   "postCreateCommand": ".devcontainer/post-create.sh",
   "postStartCommand": ".devcontainer/post-start.sh",
-  "postAttachCommand": "echo '🎉 Welcome to AI Agents Course! Check CODESPACES_GUIDE.md to get started.'"
+  "postAttachCommand": "echo '🎉 Welcome to AI Agents Course! 🐍 Conda environment ready. Check CODESPACES_GUIDE.md to get started.'"
 }

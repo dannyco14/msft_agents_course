@@ -7,6 +7,15 @@ set -e
 
 echo "🔄 Starting AI Agents Course session..."
 
+# Activate conda environment
+source /opt/conda/bin/activate ai-agents
+
+# Check conda environment
+echo "🐍 Conda Environment:"
+echo "  Environment: $CONDA_DEFAULT_ENV"
+echo "  Python: $(which python)"
+echo "  Version: $(python --version)"
+
 # Check if required environment variables are set
 echo "🔍 Checking environment configuration..."
 
