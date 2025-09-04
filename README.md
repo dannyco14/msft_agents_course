@@ -2,7 +2,7 @@
 
 ![Generative AI For Beginners](./images/repo-thumbnailv2.png)
 
-## 11 Lessons teaching everything you need to know to start building AI Agents
+## A courese teaching everything you need to know to start building AI Agents
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/ai-agents-for-beginners.svg)](https://github.com/microsoft/ai-agents-for-beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/ai-agents-for-beginners.svg)](https://GitHub.com/microsoft/ai-agents-for-beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -27,7 +27,7 @@
 
 ## 🌱 Getting Started
 
-This course has 11 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
+This course has lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
 
 **🚀 Quick Start Options:**
 
@@ -105,13 +105,13 @@ Do you have suggestions or found spelling or code errors? [Raise an issue](https
 | Metacognition Design Pattern                 | [Link](./09-metacognition/README.md)               | [Video](https://youtu.be/His9R6gw6Ec?si=8gck6vvdSNCt6OcF)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | AI Agents in Production                      | [Link](./10-ai-agents-production/README.md)        | [Video](https://youtu.be/l4TP6IyJxmQ?si=31dnhexRo6yLRJDl)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Using Agentic Protocols (MCP, A2A and NLWeb) | [Link](./11-agentic-protocols/README.md)           | [Video](https://youtu.be/X-Dh9R3Opn8)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
-| Context Engineering for AI Agents            | Coming - September 3rd                             |                                                            |                                                                                        |
-| Managing Agentic Memory                      | Coming - September 10th                            |                                                            |                                                                                        |
-| Evaluating AI Agents                         | Coming - September 17th                            |                                                            |                                                                                        |
-| Building Computer Use Agents (CUA)           | Coming - September 24th                            |                                                            |                                                                                        |
+| Context Engineering for AI Agents            | [Link](./12-context-engineering/README.md)         | [Video](https://youtu.be/F5zqRV7gEag)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
+| Managing Agentic Memory                      | Coming - September 11th                            |                                                            |                                                                                        |
+| Evaluating AI Agents                         | Coming - September 18th                            |                                                            |                                                                                        |
+| Building Computer Use Agents (CUA)           | Coming - September 25th                            |                                                            |                                                                                        |
 | Deploying Scalable Agents                    | Coming - September 25th                            |                                                            |                                                                                        |
-| Creating Local AI Agents                     | Coming - October 2nd                               |                                                            |                                                                                        |
-| Securing AI Agents                           | Coming - October 9th                               |                                                            |                                                                                        |
+| Creating Local AI Agents                     | Coming - October 3rd                               |                                                            |                                                                                        |
+| Securing AI Agents                           | Coming - October 10th                               |                                                            |                                                                                        |
 
 ## 🎒 Other Courses
 

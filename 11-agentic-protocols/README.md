@@ -85,11 +85,11 @@ A2A focuses on enabling communication between agents and having them work togeth
 #### Agent Card
 
 Similar to how an MCP server shares a list of tools, an Agent Card has:
-    ◦ The Name of the Agent .
-    ◦ A **description of the general tasks** it completes.
-    ◦ A **list of specific skills** with descriptions to help other agents (or even human users) understand when and why they would want to call that agent.
-    ◦ The **current Endpoint URL** of the agent
-    ◦ The **version** and **capabilities** of the agent such as streaming responses and push notifications.
+- The Name of the Agent .
+- A **description of the general tasks** it completes.
+- A **list of specific skills** with descriptions to help other agents (or even human users) understand when and why they would want to call that agent.
+- The **current Endpoint URL** of the agent
+- The **version** and **capabilities** of the agent such as streaming responses and push notifications.
 
 #### Agent Executor
 
